@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //db connection and sync 
-const db = require("./app/models");
+const db = require("./models/employee.model");
 db.sequelize.sync()
   .then(() => {
     console.log("Synced db.");
